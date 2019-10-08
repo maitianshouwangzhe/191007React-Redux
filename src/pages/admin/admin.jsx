@@ -47,7 +47,8 @@ class Admin extends Component{
                             <Route path='/charts/bar' component={Bar}/>
                             <Route path='/charts/line' component={Line}/>
                             <Route path='/charts/pie' component={Pie}/>
-                            <Route component={NotFound}/>             {/* 上面没有一个匹配的， 则为404页面*/}
+                            {/* 上面没有一个匹配的， 则为404页面， 建议将404放在最后一行， 这是由于Switch从上往下执行，一旦放在前面，则总是匹配这个  */}
+                            <Route component={NotFound}/>             
                         </Switch>
                     </Content>
                     <Footer
