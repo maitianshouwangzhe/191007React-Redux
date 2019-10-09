@@ -36,6 +36,7 @@ class LeftNav extends Component{
     getMenuNodes2 = (menuList) => {
         // 取当前的路径
         const path = this.props.location.pathname
+        console.log(path)
         return menuList.reduce((pre, item) => {
             // 如果当前用户对item对应的权限，则才需要添加对应的菜单项目。否则不添加
             if (this.hasAuth(item)) {
