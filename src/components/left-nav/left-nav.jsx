@@ -34,16 +34,13 @@ class LeftNav extends Component{
     // 第二种办法，生成对应的标签数组
     // 采用reduce + 递归的方法
     getMenuNodes2 = (menuList) => {
-        // 取当前请求的路径
+        // 取当前的路径
         const path = this.props.location.pathname
-        // reduce需要传入两个参数：第二参数为：初始值，此例为空数组
-        // reduce表示累计累加，如果向数组里面不断添加对象，也是累计累加的方法
-        // 第一个参数为：函数， 此时为遍历的回调函数(pre, item), 其中pre为上一次统计的结果
         return menuList.reduce((pre, item) => {
             // 如果当前用户对item对应的权限，则才需要添加对应的菜单项目。否则不添加
             if (this.hasAuth(item)) {
                 if (!item.children){
-                    // 判断item是否为当前对应的item（解决： 刷新后标题错误的bug）
+                    // 判断item是否为当前对应的item（解决： 刷新后标题出错的bug）
                     if (item.key === path || path.indexOf(item.key) === 0){
                         // 更新redux中setHeadTitle的状态
                         this.props.setHeadTitle(item.title)
