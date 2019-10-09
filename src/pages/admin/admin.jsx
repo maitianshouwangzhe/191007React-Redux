@@ -38,6 +38,7 @@ class Admin extends Component{
                     <Header/>
                     <Content style={{margin:'20px', backgroundColor:"#fff"}}>
                         <Switch>
+                            {/* 当访问根路径时， 跳转到/home路径， 但路由显示的路径仍为/, 而不是/home  */}
                             <Redirect exact from='/' to='/home'/>
                             <Route path='/home' component={Home}/>
                             <Route path='/category' component={Category}/>
