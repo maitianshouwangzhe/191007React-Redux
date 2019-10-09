@@ -46,7 +46,7 @@ class LeftNav extends Component{
                         // 更新redux中setHeadTitle的状态
                         this.props.setHeadTitle(item.title)
                     }
-                    // 解决从根目录访问，有标题不能显示的bug
+                    // 解决从根目录访问，出现标题不能显示的bug
                     if (path === '/'){
                     this.props.setHeaderTitle('首页')
                     }
