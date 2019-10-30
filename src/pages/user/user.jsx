@@ -84,7 +84,7 @@ export default class User extends Component{
     }
 
 
-    // 根据请求得到的角色列表的roles数组, 生成包含所有角色名的对象(属性名用角色id)
+    // 根据请求得到的角色列表的roles数组, 生成包含所有角色名的对象(属性名用角色id)， 避免每一次render
     // 初始值是一个空对象
     initRoleNames = (roles) => {
         const roleNames = roles.reduce((pre, role) => {
