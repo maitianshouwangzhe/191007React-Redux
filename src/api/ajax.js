@@ -29,10 +29,10 @@ export default function ajax(url, data={}, type='GET') {
         }
         //  2、如果成功，调用resolve(value)
         promise.then( response => {
-            // 异步得到的不是response, 而是response.data
-            // response.data为一个对象，
-            // 如： 具有嵌套结构
-            // {status:0, data:{status:0, data:{}} } 或者 {status:1, data:{status:1, data:{} }
+            // 异步应该得到的不是response, 而是response.data
+            // response为一个对象，具有嵌套结构，形如:             
+            // { status:200, data:{ status:0, data:{} } } 或者 {status:200, data:{status:1, data:{} }
+            //  而实际需要的数据为response.data
             resolve(response.data)
             // console.log('response,,,', response)
             // console.log('response.data打印输出ing', response.data)
