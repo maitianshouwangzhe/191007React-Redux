@@ -161,7 +161,7 @@ class Role extends Component{
                     pagination={{defaultPageSize:PAGE_SIZE}}
                     rowSelection={{
                         type:'radio',
-                        selectedRowKeys:[role._id],   // 点击整行时回调
+                        selectedRowKeys:[role._id],   // 选中某个radio
                         onSelect: (role) => {       // 点击某个radio时回调
                             this.setState({
                                 role
