@@ -162,7 +162,7 @@ class Role extends Component{
                     rowSelection={{
                         type:'radio',
                         selectedRowKeys:[role._id],   // 选中某个radio
-                        onSelect: (role) => {       // 点击某个radio时回调
+                        onSelect: (role) => {       // onSelect手动点击某个radio时回调
                             this.setState({
                                 role
                             })
