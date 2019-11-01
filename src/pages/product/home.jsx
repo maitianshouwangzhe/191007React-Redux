@@ -119,6 +119,7 @@ export default class ProductHome extends Component{
         this.initColomns()
     }
 
+    // 后台分页
     // 获取指定页码的数据，并显示
     // pageNum 为页码（第几页）， PAGE_SIZE为每页数量
     getProducts = async(pageNum) => {
