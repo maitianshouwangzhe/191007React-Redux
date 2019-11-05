@@ -17,7 +17,8 @@ class ProductAddUpdate extends Component{
         options:[]
     }
 
-
+     //  https://react-1251415695.cos-website.ap-chengdu.myqcloud.com/docs/refs-and-the-dom.html
+     //  创建一个 ref 来存储 某某（如下的pw） 的 DOM 元素
     constructor(props){
         super(props)
         // 创建用于保存ref标识的标签对象的容器
